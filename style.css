@@ -1,0 +1,192 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: #1e1e1e;
+}
+:root{
+    --mainColor: #ffffff
+}
+.bgContainer{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    background-color: #1e1e1e;
+}
+.filterLayer{
+    width: 100%;
+    height: 100%;
+    background-color: #0000004b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.clock{
+    color: var(--mainColor);
+    margin-left: 10px;
+    opacity: 0;
+    display: none;
+    font-size: 140px;
+    text-shadow: 4px 4px 8px #0000000f;
+}
+.credit{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 10px;
+}
+.settingsBtn{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    mask-image: url(gear.svg);
+    mask-position: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    background-color: var(--mainColor);
+    width: 24px;
+    height: 24px;
+    transition: all ease 0.3s;
+    z-index: 20;
+}
+.settingsBtn:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.settingsPanel{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 270px;
+    height: 100vw;
+    background-color: #ffffff;
+    backdrop-filter: blur(5px);
+    z-index: 19;
+    padding-top:32px;
+    display: none;
+}
+.headingText{
+    margin: 0;
+    margin-left: 5px;
+
+}
+#collection{
+    width: calc(100% - 40px);
+    padding: 0;
+    margin: 0;
+    margin-left: 5px;
+    border: none;
+    outline: none;
+    background-color: #e7e6e6;
+    border-radius: 10px;
+}
+#color{
+    width: calc(100% - 40px);
+    padding: 0;
+    margin: 0;
+    margin-left: 5px;
+    border: none;
+    outline: none;
+    background-color: #e7e6e6;
+    border-radius: 10px;
+}
+.subheadingText{
+    font-size: 12px;
+    color: #2c2c2c;
+    margin: 0;
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+.creditLink{
+    display: block;
+    color: var(--mainColor);
+    font-size: 16px;
+    text-decoration: none;
+    margin: 0;
+    line-height: 16px;
+    transition: all ease 0.2s;
+    background-color: #00000000;
+    padding: 5px;
+    border-radius: 7px;
+}
+.creditLink:hover{
+    transform: scale(1.1);
+    color: var(--mainColor);
+    background-color: #0000004b;
+}
+.character{
+    display: block;
+    font-size: 120px;
+    color: var(--mainColor);
+    opacity: 0;
+}
+.welcomingAnimation{
+    animation: slideUp 0.8s linear(0, 0.402 7.4%, 0.711 15.3%, 0.929 23.7%, 1.008 28.2%, 1.067 33%, 1.099 36.9%, 1.12 41%, 1.13 45.4%, 1.13 50.1%, 1.111 58.5%, 1.019 83.2%, 1.004 91.3%, 1) forwards;
+}
+.titleholder{
+    display: flex;
+    flex-direction: row;
+    
+}
+.goOutClass{
+    animation: goOut 0.3s ease 0.5s forwards;
+}
+*{
+  font-family: "Momo Signature", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.slideUP{
+    animation: slideUp 0.8s ease forwards;
+}
+.submitBtn{
+    width: calc(100% - 40px);
+    margin-left: 5px;
+    background-color: #e7e6e6;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    transition: all ease 0.3s
+}
+.submitBtn:hover{
+    transform: scale(1.05);
+    background-color: #efefef;
+    cursor: pointer;
+}
+@keyframes slideUp {
+    0%{
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes goOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.goInClass{
+    animation: goIn 0.3s ease forwards;
+}
+@keyframes goIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
